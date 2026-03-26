@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRĘÑDY DRIPŚ  - Premium Streetwear & Fashion</title>
+    <meta name="description" content="Discover the latest in streetwear fashion at TRĘÑDY DRIPŚ. Premium clothing, exclusive drops, and trendy styles for the modern individual.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>TRĘÑDY DRIPŚ</h2> 
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#categories" class="nav-link">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-icon cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay" aria-hidden="true">
+        <aside class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <div class="cart-drawer-header">
+                <h3 id="cartTitle">Your Cart</h3>
+                <button class="cart-close" type="button" aria-label="Close cart">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="cart-drawer-body">
+                <div class="cart-empty" id="cartEmpty">Your cart is empty.</div>
+                <ul class="cart-items" id="cartItems" aria-live="polite"></ul>
+            </div>
+
+            <div class="cart-drawer-footer">
+                <div class="cart-total">
+                    Total: <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="btn btn-primary cart-checkout" type="button" id="cartCheckout">
+                    Checkout
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Drip with Confidence</h1>
+                <p class="hero-subtitle">Discover the latest in streetwear fashion. Premium quality, exclusive designs, and trends that define the culture.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#categories" class="btn btn-secondary">View Categories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <img class="hero-logo" src="./assests/Untitled Project - Drips & Drops Clothing.png" alt="Trendy Drips logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Handpicked items that define the latest trends</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Urban Essentials Tee</h3>
+                        <p class="product-price">$29.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Street Style Hoodie</h3>
+                        <p class="product-price">$59.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vintage Denim Jacket</h3>
+                        <p class="product-price">$79.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Limited Edition Cap</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="#" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+                <p>Find your perfect style in our curated collections</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>T-Shirts</h3>
+                    <p>Essential tees for every occasion</p>
+                    <a href="tshirts.html" class="category-link">Shop T-Shirts</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Hoodies</h3>
+                    <p>Comfortable and stylish hoodies</p>
+                    <a href="#" class="category-link">Shop Hoodies</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Jackets</h3>
+                    <p>Statement pieces for layering</p>
+                    <a href="#" class="category-link">Shop Jackets</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Accessories</h3>
+                    <p>Complete your look with accessories</p>
+                    <a href="#" class="category-link">Shop Accessories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- T-Shirts Section -->
+    <!-- <section id="tshirts" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>T-Shirts</h2>
+                <p>Fresh drips for every day</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/kids yellow samm.png"/>
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kids Yellow Tee</h3>
+                        <p class="product-price">$14.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/SAMPLE 1.png" alt="Trendy Drips Tee Sample 1">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 1</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                            <img loading="lazy" src="./assests/SAMPLE 2.png" alt="Trendy Drips Tee Sample 2">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Empowerd Women Tee</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/SAMPLE 4.png" alt="Trendy Drips Tee Sample 4">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 4</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/Untitled-6.png" alt="Trendy Drips Tee Untitled 6">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 5</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/SAMPLE11.png" alt="Trendy Drips Tee Sample 11">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 6</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                            <img loading="lazy" src="./assests/Untitled-12.png" alt="Trendy Drips Tee Untitled 12">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 7</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/Untitled-14.png" alt="Trendy Drips Tee Untitled 14">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 8</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/Untitled-16.png" alt="Trendy Drips Tee Untitled 16">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 9</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/Untitled-8.png" alt="Trendy Drips Tee Untitled 8">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 10</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">png
+                        <img loading="lazy" src="./assests/Untitled-13.png" alt="Trendy Drips Tee Untitled 13">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 11</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img loading="lazy" src="./assests/Untitled-3.png" alt="Trendy Drips Tee Untitled 3">
+                        <div class="product-overlay">
+                            <button class="btn btn-small">Quick View</button>
+                            <button class="btn btn-small">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Trendy Drips Tee 12</h3>
+                        <p class="product-price">$24.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About TRĘÑDY DRIPŚ</h2>
+                    <p>Founded in 2020, TRĘÑDY DRIPŚ has been at the forefront of streetwear fashion, bringing you the latest trends and exclusive designs. We believe that fashion is a form of self-expression, and our carefully curated collection reflects the diverse styles of our community.</p>
+                    <p>From premium materials to sustainable practices, we're committed to delivering quality clothing that not only looks great but also aligns with your values.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Products</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Countries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <i class="fas fa-store"></i>
+                        <p>Our Story</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in the Loop</h2>
+                <p>Get exclusive access to new drops, special offers, and style tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TRĘÑDY DRIPŚ</h3>
+                    <p>Your go-to destination for premium streetwear and fashion-forward clothing.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_trendydrips/"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@tręñdydripś.com</p>
+                        <p><i class="fas fa-phone"></i> 08020918676</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 2 John Owokade St, Ikotun, Lagos 102213, Lagos</p>
+                        <p><i class="fas fa-location-dot"></i> <a href="https://maps.app.goo.gl/m3ubAjvQ4zipeZf48" target="_blank" rel="noopener">View on Google Maps</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TRĘÑDY DRIPŚ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
