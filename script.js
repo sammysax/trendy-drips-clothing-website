@@ -35,6 +35,11 @@ const cartItemsEl = document.querySelector('#cartItems');
 const cartEmptyEl = document.querySelector('#cartEmpty');
 const cartTotalEl = document.querySelector('#cartTotal');
 const cartCloseBtn = document.querySelector('.cart-close');
+const cartCheckoutBtn = document.querySelector('#cartCheckout');
+
+// WhatsApp order destination (Nigeria example). Replace with your number.
+// Format required by WhatsApp: country code + number (no +, no spaces)
+const WHATSAPP_NUMBER = '2348020918676';
 
 function escapeHtml(text) {
     return String(text).replace(/[&<>"']/g, (c) => {
@@ -53,6 +58,34 @@ function getCartTotals() {
     const totalQty = cartLines.reduce((sum, line) => sum + line.qty, 0);
     const totalAmount = cartLines.reduce((sum, line) => sum + (line.unitPrice * line.qty), 0);
     return { totalQty, totalAmount };
+}
+
+function buildWhatsAppOrderMessage() {
+    const { totalQty, totalAmount } = getCartTotals();
+    const lines = cartLines.map((line) => {
+        const lineTotal = (line.unitPrice * line.qty).toFixed(2);
+        return `- ${line.name} (x${line.qty}) — $${lineTotal}`;
+    });
+
+    return [
+        'New order from Trendy Drips website',
+        '',
+        ...lines,
+        '',
+        `Items: ${totalQty}`,
+        `Total: $${totalAmount.toFixed(2)}`
+    ].join('\n');
+}
+
+function sendCartToWhatsApp() {
+    if (cartLines.length === 0) {
+        showNotification('Your cart is empty');
+        return;
+    }
+
+    const text = buildWhatsAppOrderMessage();
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
 }
 
 function renderCart() {
@@ -96,6 +129,12 @@ function renderCart() {
     });
 }
 
+if (cartCheckoutBtn) {
+    cartCheckoutBtn.addEventListener('click', () => {
+        sendCartToWhatsApp();
+    });
+}
+
 function openCart() {
     if (!cartOverlay) return;
     cartOverlay.classList.add('is-open');
@@ -133,7 +172,6 @@ function addToCart({ name, priceText }) {
     showNotification(`${name} added to cart!`);
     animateCartCount();
     renderCart();
-    openCart();
 }
 
 // Add to cart functionality
